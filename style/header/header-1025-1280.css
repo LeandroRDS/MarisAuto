@@ -1,0 +1,14 @@
+/* leptop pequeno*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .div-img-fundo-header {
+         background-size: 150% 100%;    
+     }
+          
+     .div-img-fundo-header   .discricao-header {
+         height: 25%;
+     }
+      
+     .div-img-fundo-header .discricao-header .div-contencao #span3 {
+         font-size: 40px;
+     }
+ }

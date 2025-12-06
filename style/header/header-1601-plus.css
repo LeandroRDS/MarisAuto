@@ -1,0 +1,17 @@
+/* tela 4k*/
+@media (min-width: 1601px) {
+    .div-img-fundo-header {
+        background-size: 130% 100%;
+    }
+
+    
+    .div-img-fundo-header   .discricao-header {
+        height: 25%;
+        
+    }    
+    
+    .div-img-fundo-header .discricao-header .div-contencao #span3 {
+        font-size: 40px;
+    }
+    
+}

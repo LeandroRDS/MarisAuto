@@ -1,0 +1,19 @@
+1- como não ter que reescrever todas as linhas de cofego de cada anuncios?
+tenho que criar um formulario  para coletar as informações 
+precioso de um lugar para guardar essas informaçoes.
+preciso de um banco de dados.
+preciso acessar o banco de dados para pegar as informações 
+como eu  faço para pegar as informações do banco e colocar no html ?
+MySQL.
+gerando html dinanmicamente. 
+quando eu clicar em adicionar anuncio vai chamar o formulario, eu salvo o formulario.
+
+================ETAPAS===================
+1- APRENDO O BASICO DE PHP 
+como fazer um formulario e para o cliente prenencher e eu pegar as informações e colocar no banco de dados.
+2- organizar os codigos para nao precisar repetir.
+para organizar o estilo do codigo eu preciso criar variaveis para tudo desde o botao ate os papael de parede (fundos)
+3-  ja criei a variavel do fundo do header
+    criei uma pasta para os estilos do header 
+    estou criando arquivois separados pra cada tamanho de tela 
+    tbm atualizano a variavel fundo 

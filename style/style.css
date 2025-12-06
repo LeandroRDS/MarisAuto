@@ -1,0 +1,22 @@
+/* Reset básico para todos os elementos */
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantir que o html e body ocupem toda a altura */
+html, body {
+    height: 100%;
+}
+
+/* Definir estilos padrão para listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Remover decoração padrão de links */
+a {
+    text-decoration: none
+}
+

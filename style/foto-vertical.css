@@ -1,0 +1,7 @@
+div .foto-vertical{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.315), -1px -1px 7px rgba(0, 0, 0, 0.315) ;
+    height:390px;  
+    overflow: hidden;
+}

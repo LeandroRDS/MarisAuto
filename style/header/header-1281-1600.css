@@ -1,0 +1,20 @@
+/* leptop grande/PC*/
+@media (min-width: 1281px) and (max-width: 1600px){
+    .div-img-fundo-header {
+        background-size: 130% 100%;
+    }
+    @media (min-width: 1400px){
+        .div-img-fundo-header {
+            background-size: 100% 100%;
+        }
+    }
+
+    .div-img-fundo-header   .discricao-header {
+        height: 25%;
+    }
+    
+    .div-img-fundo-header .discricao-header .div-contencao #span3 {
+        font-size: 40px;
+    }
+    
+}

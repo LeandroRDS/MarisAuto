@@ -1,0 +1,15 @@
+/* telefone grande */
+@media (min-width: 481px) and (max-width: 600px){
+    .div-img-fundo-header { 
+        background-size: 250% 100%;       
+    }
+    
+    .div-img-fundo-header   .discricao-header {
+        height: 30%;
+    }
+    
+    .div-img-fundo-header .discricao-header .div-contencao #span3 {
+        font-size: 40px;
+    }
+    
+}

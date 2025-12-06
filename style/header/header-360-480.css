@@ -1,0 +1,17 @@
+@import url(header-imports.css);
+/* telefone medeio */
+@media (min-width: 361px) and (max-width: 480px){
+    .div-img-fundo-header {
+        background-size: 250% 80%;     
+    }
+    
+    .div-img-fundo-header   .discricao-header {
+        height: 30%;        
+    }
+    
+    .div-img-fundo-header .discricao-header .div-contencao #span3 {
+        font-size: 40px;
+    }
+    
+}
+

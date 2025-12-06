@@ -1,0 +1,9 @@
+.div-span-apresentacao {
+display: flex;
+justify-content: center;
+margin: 20px 0px 20px 0px;
+}
+
+.div-span-apresentacao  .spam-apresentacao{
+    font-size: 1.9em;
+}
