@@ -1,6 +1,6 @@
 @import url(header-imports.css);
 /* telefone medeio */
-@media (min-width: 361px) and (max-width: 480px){
+@media (min-width: 360px) and (max-width: 480px){
     .div-img-fundo-header {
         background-size: 250% 80%;     
     }

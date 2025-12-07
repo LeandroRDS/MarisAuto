@@ -1,3 +1,5 @@
+@import url(style.css);
+
 @import url(header/header.css);
 @import url(header/header-360-480.css);
 @import url(header/header-481-600.css);
@@ -6,3 +8,22 @@
 @import url(header/header-1025-1280.css);
 @import url(header/header-1281-1600.css);
 @import url(header/header-1601-plus.css);
+
+
+
+@import url(body/opcoes.css);
+@import url(body/body-padrao.css);
+@import url(body/body-360-480.css);
+@import url(body/body-481-600.css);
+@import url(body/body-481-600.css);
+@import url(body/body-601-768.css);
+@import url(body/body-769-1024.css);
+@import url(body/body-1025-1280.css);
+@import url(body/body-1281-1600.css);
+@import url(body/body-1601-plus.css);
+
+@import url(footer/footer.css);
+
+
+
+@import url(fontes.css);

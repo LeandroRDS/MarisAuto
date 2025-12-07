@@ -1,4 +1,7 @@
 :root{
     --img-fundo-header: url('../../img/imagem_de_fundo_header.webp');
+
+    --font-destaque: "Lora", serif;
+    --font-padrao: "Manrope", sans-serif ;
     
 }

@@ -17,3 +17,4 @@ para organizar o estilo do codigo eu preciso criar variaveis para tudo desde o b
     criei uma pasta para os estilos do header 
     estou criando arquivois separados pra cada tamanho de tela 
     tbm atualizano a variavel fundo 
+4- tenho que apagar os codigos repetidos e colocar eles no body-padrao 

@@ -1,0 +1,21 @@
+body::-webkit-scrollbar {
+    display: none;
+    /* Esconde a barra no Chrome, Safari e Edge */
+}
+
+
+/* estilização do cabaçalho do body */
+.div-span-apresentacao {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.div-span-apresentacao .spam-apresentacao {
+    font-family: var(--font-destaque);
+    font-optical-sizing: auto;
+    font-size: 1.9em;
+}
+
+/* estilisação padrão do corpo do body */
