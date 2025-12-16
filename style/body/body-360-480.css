@@ -1,20 +1,7 @@
 @media (min-width: 360px) and (max-width: 480px) {
 
     .opcoes {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: initial;
-        border: 1px solid rgba(0, 0, 0, 0.514);
-        margin-top: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.514);
-    }
-
-    .opcoes .div-img-foto-carro {
-        background-color: initial;
-        width: 100vw;
-        height: 350px;
+        width: 100%;
     }
 
 

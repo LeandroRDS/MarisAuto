@@ -1,22 +1,8 @@
 @media (min-width: 1601px) {
-
     .opcoes {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: initial;
-        border: 1px solid rgba(0, 0, 0, 0.514);
-        margin-top: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.514);
+        width: 100%;
     }
-
-    .opcoes .div-img-foto-carro {
-        background-color: initial;
-        width: 100vw;
-        height: 350px;
-    }
-
+ 
 
     .opcoes .class-img-opcao {
         width: 100%;
