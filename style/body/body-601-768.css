@@ -6,36 +6,5 @@
 
 
 
-   
-    .opcoes .descricao {
-        font-size: 22px;
-        font-family: 'Lato', sans-serif;
-        margin: auto;
-
-
-    }
-
-    .opcoes .div-conteiner-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 35%;
-        background-color: inherit;
-    }
-
-    .opcoes .div-conteiner-btn .div-btn-comprar {
-        width: 20%;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        border: 1px solid rgba(4, 0, 255, 0.527);
-        margin: 0px 0px 15px 0px;
-        width: 80px;
-        box-shadow: 1px 1px 10px rgba(18, 91, 175, 0.37);
-        background-color: inherit;
-
-    }
 
 }

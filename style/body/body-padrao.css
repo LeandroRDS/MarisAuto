@@ -24,14 +24,14 @@ body::-webkit-scrollbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgba(255, 0, 0, 0);
+    /* background-color: rgba(255, 0, 0, 0); */
 }
 
 .opcoes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(235, 228, 15);
+    background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.514);
     margin-top: 20px;
     border-radius: 10px;
@@ -57,6 +57,38 @@ body::-webkit-scrollbar {
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
-    background-color: red;
+    background-color: transparent;
     height: 30%;
+}
+
+
+.opcoes .descricao {
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+.opcoes .div-conteiner-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+    background-color: transparent;
+    height: 20%;
+}
+
+
+.opcoes .div-conteiner-btn .div-btn-comprar {
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid rgba(4, 0, 255, 0.527);
+    margin: 0px 0px 15px 0px;
+    width: 80px;
+    box-shadow: 1px 1px 10px rgba(18, 91, 175, 0.37);
+    background-color: transparent;
+
 }
