@@ -1,0 +1,11 @@
+1- como não ter que reescrever todas as linhas de cofego de cada anuncios?
+tenho que criar um formulario  para coletar as informações 
+precioso de um lugar para guardar essas informaçoes.
+preciso de um banco de dados.
+preciso acessar o banco de dados para pegar as informações 
+como eu  faço para pegar as informações do banco e colocar no html ?
+MySQL.
+gerando html dinanmicamente. 
+quando eu clicar em adicionar anuncio vai chamar o formulario, eu salvo o formulario.
+
+

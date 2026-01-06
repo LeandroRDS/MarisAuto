@@ -1,0 +1,2 @@
+5 implementar o php interativo nas adções de anúncios 
+pagina de detalhes de cada veiculo anunciado 
