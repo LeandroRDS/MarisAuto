@@ -8,3 +8,4 @@ para organizar o estilo do codigo eu preciso criar variaveis para tudo desde o b
     estou criando arquivois separados pra cada tamanho de tela 
     tbm atualizano a variavel fundo 
 4- tenho que apagar os codigos repetidos e colocar eles no body-padrao 
+5- desenvolver o php interativo pra subir anúncios inicio 07/01
