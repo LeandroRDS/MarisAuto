@@ -1,3 +1,3 @@
 <?php
-echo "ph"
+echo "ph";
 ?>
