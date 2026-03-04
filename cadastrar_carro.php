@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $conn->query($sql);
 
-    echo "Carro cadastrado com sucesso!";
+    //echo "Carro cadastrado com sucesso!";
     
     
 }

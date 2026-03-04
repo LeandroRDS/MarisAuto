@@ -2,17 +2,6 @@
 include 'includes/conexao.php'; //conexao com o banco de dados
 ?>
 
-
-<?php
-$sql = "SELECT * FROM carros ORDER BY id DESC";
-$resultado = $conn->query($sql);
-?>
-
-
-<?php
-while($carro = $resultado->fetch_assoc()):
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -67,18 +56,9 @@ while($carro = $resultado->fetch_assoc()):
         </div>
 
         <div class="conteiner_opcoes">
-
-
-
-        <div class="carro">
-            <img src="uploads/<?php echo $carro['foto'];?> ">
-            <h3><?php echo $carro['descrição'];?></h3>
-            <p>R$ <?php echo $carro['valor'];?> </p>
-        </div>
-
-        <?php endwhile; ?>
-
-              <div class="opcoes" ><!--indicação-->
+            
+            
+             <div class="opcoes" ><!--indicação-->
 
                 <div class="div-img-foto-carro">
                     <img class="class-img-opcao" src="img/indicacao.jpg" alt="Fature com a sua indicação" >
@@ -95,6 +75,38 @@ while($carro = $resultado->fetch_assoc()):
                     </div>
                 </div>
             </div>   
+
+
+            
+            <?php
+				$sql = "SELECT * FROM carros ORDER BY id DESC";
+				$resultado = $conn->query($sql);
+			?>
+
+
+			<?php
+				while($carro = $resultado->fetch_assoc()):
+			?>
+            
+             <div class="carro opcoes" >
+
+                <div class="div-img-foto-carro">
+                    <img class="class-img-opcao" src="uploads/<?php echo $carro['foto'];?>" alt="Hb20 2024 1.0 Completo" >
+                </div>
+
+                <div class="div-descricao">
+                    <span class="descricao"> <?php echo $carro['descricao'];?> <br> Entrada + parcelas a partir de <?php echo $carro['valor'];?> </span>
+                </div>
+
+                <div class="div-conteiner-btn">
+
+                    <div id="Megane" class=" div-btn-comprar div-acoa ">
+                        <a class="LATO, " >WhatsApp</a>
+                    </div>
+                </div>
+            </div>    
+
+        <?php endwhile; ?>
 
 
             <div class="opcoes" ><!--megane-->
