@@ -1,4 +1,17 @@
+<?php
+include 'includes/conexao.php'; //conexao com o banco de dados
+?>
 
+
+<?php
+$sql = "SELECT * FROM carros ORDER BY id DESC";
+$resultado = $conn->query($sql);
+?>
+
+
+<?php
+while($carro = $resultado->fetch_assoc()):
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -57,7 +70,13 @@
 
 
 
+        <div class="carro">
+            <img src="uploads/<?php echo $carro['foto'];?>">
+            <h3><?php echo $carro['descrição'];?></h3>
+            <p>R$ <?php echo $carro['valor'];?> </p>
+        </div>
 
+        <?php endwhile; ?>
 
               <div class="opcoes" ><!--indicação-->
 
