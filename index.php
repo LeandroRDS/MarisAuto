@@ -70,24 +70,11 @@ while($carro = $resultado->fetch_assoc()):
 
 
 
-
-         <div class="opcoes" ><!--megane-->
-
-                <div class="carro div-img-foto-carro">
-                    <img class="class-img-opcao" src="uploads/<?php echo $carro['foto'];?>"  >
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao"><?php echo $carro['descrição'];?> <br> Entrada + parcelas a partir de R$ <?php echo $carro['valor'];?> </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="Megane" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, " >WhatsApp</a>
-                    </div>
-                </div>
-            </div>   
+        <div class="carro">
+            <img src="uploads/<?php echo $carro['foto'];?>">
+            <h3><?php echo $carro['descrição'];?></h3>
+            <p>R$ <?php echo $carro['valor'];?> </p>
+        </div>
 
         <?php endwhile; ?>
 
