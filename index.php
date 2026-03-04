@@ -71,7 +71,7 @@ while($carro = $resultado->fetch_assoc()):
 
 
         <div class="carro">
-            <img src="uploads/<?php echo $carro['foto'];?>">
+            <img src="uploads/<?php echo $carro['foto'];?> ">
             <h3><?php echo $carro['descrição'];?></h3>
             <p>R$ <?php echo $carro['valor'];?> </p>
         </div>
