@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 5503
+    "liveServer.settings.port": 5503,
+    "php.validate.executablePath": "C:\\php-8.5.3-Win32-vs17-x64"
 }
