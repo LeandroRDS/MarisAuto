@@ -7,6 +7,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $valor = $_POST['valor'];
 
     echo "dados recebifos";
+
+    $foto = $_FILES['foto']['name'];
+    $tmp  = $_FILES['foto']['tmp_name'];
+
+    move_uploaded_file($tmp, "uploads/".$foto);
+
+    $sql = "INSERT INTO carros (descricao, valor, foto) 
+    VALUES ('$des1cricao','$valor','$foto')";
+
+    $conn->query($sql);
+    
+    echo "Carro cadastrado com sucesso";
 }
 
 ?>
