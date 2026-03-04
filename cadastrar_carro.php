@@ -1,49 +1,53 @@
-<?php 
-include 'include\conexao.php';
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include 'includes/conexao.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    var_dump($_POST);
 
     $descricao = $_POST['descricao'];
     $valor = $_POST['valor'];
-
-    echo "dados recebifos";
 
     $foto = $_FILES['foto']['name'];
     $tmp  = $_FILES['foto']['tmp_name'];
 
     move_uploaded_file($tmp, "uploads/".$foto);
 
-    $sql = "INSERT INTO carros (descricao, valor, foto) 
-    VALUES ('$des1cricao','$valor','$foto')";
+    $sql = "INSERT INTO carros (descricao, valor, foto)
+    VALUES ('$descricao', '$valor', '$foto')";
 
     $conn->query($sql);
-    
-    echo "Carro cadastrado com sucesso";
-}
 
+    echo "Carro cadastrado com sucesso!";
+    
+    
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre seu carro </title>
-</head>
+<html>
 <body>
-    <h2>Cadastre se carro</h2>
 
-    <form action="cadastrar_carro.php" method="post" enctype="multipart/form-data">
-        descrição:<br>
-        <input type="text" name="descricao" required><br><br>
+<h2>Cadastrar carro</h2>
 
-        valor:<br>
-        <input type="number" name="valor" required><br><br>
+<form method="POST" enctype="multipart/form-data">
 
-        foto:<br>
-        <input type="file" name="foto" required><br><br>
+Descrição:<br>
+<input type="text" name="descricao"><br><br>
 
-        <button type="submit">Cadastrar<button>
-    </form>
+Valor:<br>
+<input type="number" name="valor"><br><br>
+
+Foto:<br>
+<input type="file" name="foto"><br><br>
+
+<button type="submit">Cadastrar</button>
+
+</form>
+
 </body>
 </html>
