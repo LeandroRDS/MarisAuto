@@ -22,6 +22,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $conn->query($sql);
 
+        header("Location: index.php");
+        exit();
+
     //echo "Carro cadastrado com sucesso!";
     
     
