@@ -127,23 +127,7 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                 </div>
             </div>    
 
-            <div class="opcoes" ><!--azera-->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/azera.jpg" alt="Azera 2015 3.0 V6 " >
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">Azera 2015 3.0 V6  <br> Entrada + parcelas a partir de R$1990,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="Azera" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, " >WhatsApp</a>
-                    </div>
-                </div>
-            </div>    
+   
 
 
             <div class="opcoes" ><!--focus-->
@@ -238,43 +222,9 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                     </div>
                 </div>
             </div>    
+   
 
-            <div class="opcoes" ><!--argo 19-->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/argo 2019.jpg" alt="Argo 2019 1.0 Completo" >
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">Argo 2019 1.0 Completo <br> Entrada + parcelas a partir de R$1390,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="Argo 19" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, " >WhatsApp</a>
-                    </div>
-                </div>
-            </div>    
-
-            <div class="opcoes" ><!--208 16-->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/208 16.jpg" alt="Peugeot 208 2016 2.0 " >
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">Peugeot 208 2016 2.0 <br> Entrada + parcelas de a partir R$1490,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="208 16" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, " >WhatsApp</a>
-                    </div>
-                </div>
-            </div>    
-
+           
             <div class="opcoes" ><!--onix 19-->
 
                 <div class="div-img-foto-carro">
@@ -448,28 +398,7 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                 </div>
             </div>
 
-            <div class="opcoes"><!--astra-2008 -->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/astra_2008.jpg" alt="ASTRA ADVANTAGE 2.0 COMPLETO">
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">ASTRA ADVANTAGE 2.0 COMPLETO<br> Entrada + parcelas a partir de R$1390,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="Astra_2008" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, ">WhatsApp</a>
-                    </div>
-
-                    <!-- <div class="div-acoa  btn-detalhes">
-                        <a id="informacoes">Detalhes</a>
-                    </div> -->
-
-                </div>
-            </div>
+  
 
             <div class="opcoes"><!--fit 2014-->
 
