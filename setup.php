@@ -1,6 +1,9 @@
 <?php 
+    
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
-include("include/conexao.php");
+include("includes/conexao.php");
 
 echo "conectato<br>";
 
@@ -15,6 +18,7 @@ usuarios (
 if(mysqli_query($conn, $sql)){
     echo "tabela criada";
 }else{
+    echo "erro ao criar tabela";
     echo mysqli_error($conn);
 }
 
