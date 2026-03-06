@@ -22,7 +22,10 @@ $resultado = mysqli_query($conn, $sqlCarros);
     <title>marisauto</title>
 </head>
 <body>
-    h1
+    <h1>Perfil de <?= $usuario['usuario'] ?>?></h1>
+
+    <?php while($carro = mysqli_fetch_assoc($resultado)): ?>
+        div
     
 </body>
 </html>
