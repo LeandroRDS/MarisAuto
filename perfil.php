@@ -1,0 +1,28 @@
+<?php 
+include("includes/conexao.php");
+$user = $_GET['user'];
+
+$sqlUser = "SELECT * FROM usuarios WHERE 
+usuario='$user'";
+$resUser = mysqli_query($conn, $sqlUser);
+$usuario = mysqli_fetch_assoc($resUser);
+
+$idUsuario = $usuario['id'];
+
+$sqlCarros = "SELECT * FROM carros WHERE
+usuario_id='$idUsuario'";
+$resultado = mysqli_query($conn, $sqlCarros);
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marisauto</title>
+</head>
+<body>
+    h1
+    
+</body>
+</html>
