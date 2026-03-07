@@ -25,7 +25,12 @@ $resultado = mysqli_query($conn, $sqlCarros);
     <h1>Perfil de <?= $usuario['usuario'] ?>?></h1>
 
     <?php while($carro = mysqli_fetch_assoc($resultado)): ?>
-        div
+        <div class="carro">
+            <img src="uploads/<?= $carro['foto'] ?>" width="200">
+            <h3><?= $carro['descricao'] ?></h3>
+            <p><?= $carro['valor'] ?></p>
+        </div>
+        <?php endwhile; ?>
     
 </body>
 </html>

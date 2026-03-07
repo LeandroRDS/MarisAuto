@@ -356,72 +356,13 @@ include 'includes/conexao.php'; //conexao com o banco de dados
             </div>
 
 
-            <div class="opcoes" ><!--Start 22-->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/start 22.jpg" alt="Honda CG Start 160 2022" >
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">Honda CG Start 160 2022<br> Entrada + parcelas a partir de R$690,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="start 22" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, " >WhatsApp</a>
-                    </div>
-                </div>
-            </div>
+           
 
 
-            <div class="opcoes"><!--etios 2018-->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/etios-2018.jpeg" alt="Toyota etios 2018 1.5 automático">
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">Toyota Etios 2018 1.5 automático <br> Entrada + parcelas a partir de R$1590,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="Etios-2018" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, ">WhatsApp</a>
-                    </div>
-
-                    <!-- <div class="div-acoa  btn-detalhes">
-                        <a id="informacoes">Detalhes</a>
-                    </div> -->
-
-                </div>
-            </div>
 
   
 
-            <div class="opcoes"><!--fit 2014-->
-
-                <div class="div-img-foto-carro">
-                    <img class="class-img-opcao" src="img/fit_2014.jpeg" alt="honda Fit 2014 1.4 Automático ">
-                </div>
-
-                <div class="div-descricao">
-                    <span class="descricao">honda Fit 2014 1.4 Automático<br>Entrada + parcelas a partir de R$1590,00 </span>
-                </div>
-
-                <div class="div-conteiner-btn">
-
-                    <div id="Fit_2014" class=" div-btn-comprar div-acoa ">
-                        <a class="LATO, ">WhatsApp</a>
-                    </div>
-
-                    <!-- <div class="div-acoa  btn-detalhes">
-                        <a id="informacoes">Detalhes</a>
-                    </div> -->
-
-                </div>
-            </div>
+           
 
         </div>
 
