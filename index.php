@@ -23,7 +23,7 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                 <div class="img-logo">
                     <img src="img/logomc.png" alt="img-logo">
                 </div>
-                <!-- 
+                
                 <div id="icones">
                     <div id="icone_minha_conta" class="icon">
                         <i class="fas fa-user" ></i>
@@ -37,7 +37,7 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                     <div id="icone-menu" class="icon">
                         <i class="fas fa-bars" ></i>
                     </div>
-                </div> -->
+                </div> 
             </div>
 
             <div class="discricao-header">
