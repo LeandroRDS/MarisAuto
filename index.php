@@ -34,7 +34,7 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                     </div>
                     <div id="icone-menu" class="icon">
                         <i class="fas fa-bars" ></i>
-                    </div>
+                    </div>php --ini
                 </div> -->
             </div>
 
