@@ -23,13 +23,19 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                 <div class="img-logo">
                     <img src="img/logomc.png" alt="img-logo">
                 </div>
-                
-                <div class="div_cont_menu">
-                    <div class="div_cont_menu_btn-login">
-                        <button>Login</button>
+                <!-- 
+                <div id="icones">
+
+                    <div id="icone_carrinho" class="icon">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                </div>
-                
+                    <div id="icone_buscar" class="icon">
+                        <i class="fas fa-search" ></i>
+                    </div>
+                    <div id="icone-menu" class="icon">
+                        <i class="fas fa-bars" ></i>
+                    </div>
+                </div> -->
             </div>
 
             <div class="discricao-header">
