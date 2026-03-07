@@ -2,7 +2,7 @@
 
 if($_SERVER['SERVER_NAME'] == "localhost"){
 
-    $conn = new mysqli("localhost","root","","marisauto_1");
+    $conn = new mysqli("localhost","root","","marisauto");
 
 }else{
 
