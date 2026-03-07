@@ -11,7 +11,7 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 }else{
 
     $conn = new mysqli(
-        "sql312.infinityfree.com",
+        "sql100.infinityfree.com",
         "if0_40632939",
         "Lrdsamdsjcpr123",
         "if0_40632939_bd_anuncios"
