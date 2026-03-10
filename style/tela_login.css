@@ -1,0 +1,38 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 255, 0.589), rgba(255, 0, 200, 0.685)
+    ); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_login{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(191, 219, 255);
+    width: 60%;
+    height: 40%;
+    justify-content: top    ;
+    align-items: center;
+    border-radius: 8px;
+    gap: 5%;
+}
+
+
+.form_login input{
+    margin-top: 30px;
+    border: 2px solid rgb(191, 219, 255);
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+.form_login button{
+    width: 80px;
+    height: 35px;
+    background-color: white;
+    border: 2px solid rgb(191, 219, 255);
+    border-radius: 10px;
+    margin-top: 30px;
+}
