@@ -25,9 +25,12 @@ include 'includes/conexao.php'; //conexao com o banco de dados
                 </div>
 
                <div class="div_cont_menu">
-                      <div class="div_cont_menu_btn-login">
-                        <button>Login</button>
-                    </div>
+                    <a href="login.php">
+                        <div class="div_cont_menu_btn-login">
+                            <button><i class="fa-regular fa-user"></i></button>
+                            <span>Entar</span>
+                        </div>
+                    </a>
                </div>
 
             </div>

@@ -4,11 +4,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+	background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .form_login{
     display: flex;
-    flex-direction: column;
+    flex-direction: columna;
     border: 2px solid rgb(191, 219, 255);
     width: 60%;
     height: 40%;

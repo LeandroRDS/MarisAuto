@@ -47,7 +47,37 @@
 }
 
 .div_cont_menu{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 5px;
+    left: calc(90% - 100px);
     width: 100px;
     height: 100px;
-    background-color: red; 
+    background-color: initial; 
+}
+
+.div_cont_menu_btn-login{
+    display: flex;
+    flex-direction: column;
+}
+
+.div_cont_menu_btn-login button {
+    font-size: 1.4rem;
+    border: none;
+    background-color: rgba(0, 21, 255, 0.500);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+
+}
+
+.div_cont_menu_btn-login i {
+    color: rgb(255, 255, 255);
+   
+}
+
+.div_cont_menu_btn-login span {
+    color: aliceblue;
+    text-align: center;
 }
