@@ -38,10 +38,10 @@ if (isset($_SESSION['usuario_id'])) {
                 <?php
                     if ($usuarioLogado){
                         $href = ("logout.php");
-                        $status = ("Entrar");
+                        $status = ("Sair");
                     }else{
                         $href = ("login.php");
-                        $status = ("Sair");
+                        $status = ("Logar");
                     }
                 
                 ?>
