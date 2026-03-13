@@ -7,13 +7,14 @@ include 'includes/conexao.php';
 
 session_start();
 
-if(!isset($_COOKIE['usuario_id'])){
+if(!isset($_SESSION['usuario_id'])){
     header("location: login.php");
 }
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     var_dump($_POST);
+    $_usuario_id = $_SESSION['usuario_id'];
 
     $descricao = $_POST['descricao'];
     $valor = $_POST['valor'];
@@ -23,8 +24,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     move_uploaded_file($tmp, "uploads/".$foto);
 
-    $sql = "INSERT INTO carros (descricao, valor, foto)
-    VALUES ('$descricao', '$valor', '$foto')";
+    $sql = "INSERT INTO carros (descricao, valor, foto, usuario_id)
+    VALUES ('$descricao', '$valor', '$foto', '$_usuario_id')";
 
     $conn->query($sql);
 
