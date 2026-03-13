@@ -10,9 +10,10 @@ body{
 
 .form_login{
     display: flex;
-    flex-direction: columna;
+    flex-direction: column;
     border: 2px solid rgb(191, 219, 255);
     width: 60%;
+    max-width: 800px;
     height: 40%;
     justify-content: top    ;
     align-items: center;
@@ -24,7 +25,7 @@ body{
 .form_login input{
     margin-top: 30px;
     border: 2px solid rgb(191, 219, 255);
-    width: 80%;
+    width: 98%;
     height: 40px;
     border-radius: 10px;
 }
@@ -37,4 +38,26 @@ body{
     border: 2px solid rgb(191, 219, 255);
     border-radius: 10px;
     margin-top: 30px;
+}
+
+@media (max-width:600px) {
+
+.form_login{
+    
+    width: 100%;
+}
+
+.form_login input{
+    width: 98%;
+}    
+}
+
+@media (min-width:601px) {
+
+.form_login{
+    
+     min-width: 600px;
+}
+
+    
 }

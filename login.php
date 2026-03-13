@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/login.css">
     <title>login</title>
+    <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
     <form class="form_login"  action="logar.php" method="POST">
@@ -15,8 +14,7 @@
 
     <button>Entrar</button>
 
-    <a href="cadastro_usuario.php">Criar cadastro</a>
-
     </form>
 </body>
 </html>
+
