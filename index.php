@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario_id'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">x
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -35,11 +35,22 @@ if (isset($_SESSION['usuario_id'])) {
                     <img src="img/logomc.png" alt="img-logo">
                 </div>
 
+                <?php
+                    if ($usuarioLogado){
+                        $href = ("logout.php");
+                        $status = ("Entrar");
+                    }else{
+                        $href = ("login.php");
+                        $status = ("Sair");
+                    }
+                
+                ?>
+
                 <div class="div_cont_menu">
-                    <a href="login.php">
+                    <a href= <?= $href ?>>
                         <div class="div_cont_menu_btn-login">
                             <button><i class="fa-regular fa-user"></i></button>
-                            <span>Entar</span>
+                            <span><?= $status?></span>
                         </div>
                     </a>
                 </div>

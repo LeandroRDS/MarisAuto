@@ -1,9 +1,13 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 include 'includes/conexao.php';
+
+if(!isset($_COOKIE['usuario_id'])){
+    header("location: login.php");
+}
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
