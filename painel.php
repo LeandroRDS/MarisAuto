@@ -8,7 +8,6 @@ if(!isset($_SESSION['usuario_id'])){
 
 echo "Bem Vindo" . $_SESSION['usuario_nome'];
 
-header("Location: index.php");
-exit;
+
 
 ?>
