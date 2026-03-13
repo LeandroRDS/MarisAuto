@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['usuario_id'])) {
     $usuarioLogado = true;
     $usuario_id = $_SESSION['usuario_id'];
-    $sql = "SELECT * FROM carro WHERE usuario_id='$usuario_id'";
+    $sql = "SELECT * FROM carros WHERE usuario_id='$usuario_id'";
   
 } else {
     $usuarioLogado = false;
