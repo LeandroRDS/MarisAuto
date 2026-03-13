@@ -138,11 +138,43 @@ if (isset($_SESSION['usuario_id'])) {
                 </div>
 
             <?php endwhile; ?>
+        </div>
+
+        <script src="javascript/clikcomprar.js"></script>
+
+    </body>
+
+    <footer>
+        <div class="div_footer_conteiner">
+            <div class="conteiner_ES">
+                <div class="div_footer_identificacao_ES div_footer">
+                    <span>Criado Por Embrasoft &reg;</span>
+
+                </div>
+                <div class="div_footer_contatos_ES div_footer ">
+                    <span class="span_contato span_contato_whatsapp">Whasapp</span>
+                    <span class="span_contato span_contato_instagram">Instagran</span>
+                    <span class="span_contato span_contato_linkedin">LinkedIn</span>
+                </div>
+            </div>
+
+            <div class="conteiner_MC">
+                <div class="div_footer_identificacao_MC div_footer">
+                    <span>Mc Motors ltda &reg;</span>
+
+                </div>
+                <div class="div_footer_contatos_MC div_footer">
+                    <span class="span_contato span_contato_whatsapp_MC">Whasapp</span>
+                    <span class=" span_contato span_contato_intagram_mc">Instagran</span>
+                    <span class="span_contato span_contato_avaliacoes" id="span_avaliacao">Avalçiações do Google</span>
+                </div>
+            </div>
+        </div>
 
 
             <script src="javascript/btn_rodapeES.js "></script>
             <script src="javascript/btn_rodapeMC.js"></script>
             </footer>
-    </body>
+   
 
 </html>
