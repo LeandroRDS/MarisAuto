@@ -1,8 +1,11 @@
 const comprar = document.querySelectorAll(".div-btn-comprar"); 
 
 function Comprar(event) {
+
+    usuario_id = console.log(window.usuario.usuario_id);
+
     const idcomprar = this.id;
-    const url = ("https://wa.me/5547992643867?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es.%20" + idcomprar );
+    const url = ("https://wa.me/5547992643867?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es.%20" + idcomprar + usuario_id);
     window.location.href = url;   
 }
 
