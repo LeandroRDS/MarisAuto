@@ -15,6 +15,8 @@
 
     <button>Entrar</button>
 
+    <a href="cadastro_usuario.php">Criar cadastro</a>
+
     </form>
 </body>
 </html>
