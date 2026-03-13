@@ -8,7 +8,7 @@ if (isset($_SESSION['usuario_id'])) {
   
 } else {
     $usuarioLogado = false;
-    $sql = "SELECT * FROM carros ORDER BY id DESC";
+    $sql = "SELECT * FROM carros WHERE usuario_id='3' ORDER BY id DESC";
 }
     $resultado = mysqli_query($conn, $sql);
 ?>
