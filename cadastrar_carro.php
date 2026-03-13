@@ -5,6 +5,8 @@
 
 include 'includes/conexao.php';
 
+session_start();
+
 if(!isset($_COOKIE['usuario_id'])){
     header("location: login.php");
 }

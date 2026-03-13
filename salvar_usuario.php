@@ -10,5 +10,5 @@ $sql = "INSERT INTO usuarios
 VALUES ('$usuario','$email','$senha')";
 
 mysqli_query($conn, $sql);
-echo "usuario criado"
+header("location: login.php");
 ?>
