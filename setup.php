@@ -16,7 +16,7 @@ usuarios (
 )";
 
 if(mysqli_query($conn, $sql)){
-    echo "tabela criada";
+    echo "tabela usuarios criada";
 }else{
     echo "$sql . erro ao criar tabela ou tabela ja existente";
     echo mysqli_error($conn);
@@ -32,7 +32,7 @@ ip VARCHAR(45)
 )";
 
 if(mysqli_query($conn, $sql)){
-    echo "tabela criada";
+    echo "tabela leads criada";
 }else{
     echo "$sql . erro ao criar ou tabela ja existente ";
     echo mysqli_error($conn);
