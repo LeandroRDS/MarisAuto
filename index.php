@@ -13,10 +13,6 @@ if (isset($_SESSION['usuario_id'])) {
     $resultado = mysqli_query($conn, $sql);
 ?>
 
-<script>
-    window.usuario = <?php echo json_encode($_SESSION)?>
-</script>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
