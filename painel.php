@@ -10,8 +10,5 @@ if(!isset($_SESSION['usuario_id'])){
     exit;
 }
 
-echo "Bem Vindo" . $_SESSION['usuario_id'];
-
-
-
+header("location: perfil.php")
 ?>
