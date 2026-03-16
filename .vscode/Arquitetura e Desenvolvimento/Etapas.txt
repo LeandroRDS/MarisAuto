@@ -9,3 +9,5 @@ para organizar o estilo do codigo eu preciso criar variaveis para tudo desde o b
     tbm atualizano a variavel fundo 
 4- tenho que apagar os codigos repetidos e colocar eles no body-padrao 
 5- desenvolver o php interativo pra subir anúncios inicio 07/01
+6-criar um link personalizado pra cada login
+    -pegar o lead que veio desse link 

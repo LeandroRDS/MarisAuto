@@ -8,7 +8,7 @@
 <body>
     <form action="salvar_usuario.php" method="POST">
 
-        <input type="text" name="usuario" placeholder="Nome de usuário" required>
+        <input type="text" name="usuario" placeholder="Qual o seu nome" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="senha" placeholder="Senha" required>
 
