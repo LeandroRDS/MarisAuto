@@ -92,3 +92,9 @@ body::-webkit-scrollbar {
     background-color: transparent;
 
 }
+
+.opcoes .div-conteiner-btn .div-btn-comprar button{
+
+    border: none;
+    background-color: transparent;
+}
