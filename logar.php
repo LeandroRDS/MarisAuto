@@ -6,11 +6,13 @@
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuarios WHERE 
-    email='$email'";
-    $resultado = mysqli_query($conn, $sql);
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE 
+    email=?");
+    $stmt->bind_param("s",$email);
+    $stmt->execute();
 
-    $usuario = mysqli_fetch_assoc($resultado);
+    $resultado = $stmt->get_result();    
+    $usuario = $resultado->fetch_assoc();
 
     if($usuario && password_verify($senha, $usuario['senha'])){
         $_SESSION['usuario_id'] = $usuario['id'];
