@@ -132,8 +132,10 @@ if (isset($_SESSION['usuario_id'])) {
 
                     <div class="div-conteiner-btn">
 
-                        <div id="Megane" class=" div-btn-comprar div-acoa ">
-                            <button onclick="abrirWhatsapp(<?php echo $carro['usuario_id'];?>, <?php echo $carro['descricao'];?>)" class="LATO, ">WhatsApp</button>
+                        <div  class=" div-btn-comprar div-acoa ">
+
+                            <button class="btn_whasapp" vendedor="<?php echo $carro['usuario_id'];?>" descricao="<?php echo $carro['descricao']?>" class="LATO">WhatsApp</button>
+
                         </div>
                     </div>
                 </div>
