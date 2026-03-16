@@ -132,9 +132,9 @@ if (isset($_SESSION['usuario_id'])) {
 
                     <div class="div-conteiner-btn">
 
-                        <div  class=" div-btn-comprar div-acoa ">
+                        <div  class=" div-btn-comprar div-acoa btn_whasapp ">
 
-                            <button class="btn_whasapp" vendedor="<?php echo $carro['usuario_id'];?>" descricao="<?php echo $carro['descricao']?>" class="LATO">WhatsApp</button>
+                            <button  vendedor="<?php echo $carro['usuario_id'];?>" descricao="<?php echo $carro['descricao']?>" class="LATO">WhatsApp</button>
 
                         </div>
                     </div>
