@@ -1,11 +1,21 @@
 <?php 
 include("includes/conexao.php");
+
+if(!isset($_GET['user'])){
+    echo "usuarionão informado";
+    exit;
+}
+
 $user = $_GET['user'];
 
 $sqlUser = "SELECT * FROM usuarios WHERE 
 usuario='$user'";
 $resUser = mysqli_query($conn, $sqlUser);
 $usuario = mysqli_fetch_assoc($resUser);
+
+if(!$usuario){
+    echo "usuario não encontrado";
+}
 
 $idUsuario = $usuario['id'];
 

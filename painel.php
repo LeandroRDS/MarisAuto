@@ -10,5 +10,5 @@ if(!isset($_SESSION['usuario_id'])){
     exit;
 }
 
-header("location: perfil.php")
+header("location: perfil.php")  
 ?>
