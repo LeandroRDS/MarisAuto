@@ -16,7 +16,7 @@
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['usuario_name'] = $usuario['usuario'];
 
-        header("location: index.php");
+        header("location: painel.php");
     }else{
         echo "Login invalido";
     }
