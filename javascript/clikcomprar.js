@@ -13,5 +13,8 @@ document.querySelectorAll('.btn_whasapp').forEach(btn => {
 
         abrirWhatsapp(vendedor, descricao);
 
+        console.log("Vendedor:", vendedor);
+        console.log("Carro:", carro);
+
     })
 })
