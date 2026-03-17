@@ -1,3 +1,0 @@
-criar uma tela de login
-    quando acessado pelo meu login eu vou poder subir anuncio
-    quando acessado de outro login ano vai consegui subir 
