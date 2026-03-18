@@ -5,6 +5,11 @@ caso: clicar no btn comprar.
         pegar as informaçoes do carro e do vendedor
             colocar as informações na msg automatica no whts{...}
             colocar as informaçoes no bd_leads{
-                1- quando clicar no btn_comprar, enviar as informações "carro" e "vendedor" em parametros na URL
-                2- chamar o resistrar_leads.php para registrar no bd_leads
-                3- presico pegar as informações }
+                1- quando clicar no btn_comprar, colocar  as informações "carro" e "vendedor" no data-attributes{
+                    1- no arquivo clikcomprar.js pegar as informaçoes "carro" e "vendedor" e colocar em variales
+                    0-
+                    2- passa esses valores para a função abrirWhatsapp.
+                    3- na função abrirWhatsapp pegar os parãmetrons enviados e colocar na URL que será desdinada a abriri o Whasapp.
+                }
+                2- chamar o arquivo resistrar_leads.php para registrar no bd_leads.
+                    1- no arquivo registrar_leads.php pegar as informações que estão no data-attributes mandar para o bd_leads}

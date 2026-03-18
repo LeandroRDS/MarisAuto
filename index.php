@@ -5,12 +5,11 @@ if (isset($_SESSION['usuario_id'])) {
     $usuarioLogado = true;
     $usuario_id = $_SESSION['usuario_id'];
     $sql = "SELECT * FROM carros WHERE usuario_id='$usuario_id'";
-  
 } else {
     $usuarioLogado = false;
     $sql = "SELECT * FROM carros WHERE usuario_id='3' ORDER BY id DESC";
 }
-    $resultado = mysqli_query($conn, $sql);
+$resultado = mysqli_query($conn, $sql);
 ?>
 
 
@@ -38,21 +37,21 @@ if (isset($_SESSION['usuario_id'])) {
                 </div>
 
                 <?php
-                    if ($usuarioLogado){
-                        $href = ("logout.php");
-                        $status = ("Sair");
-                    }else{
-                        $href = ("login.php");
-                        $status = ("Logar");
-                    }
-                
+                if ($usuarioLogado) {
+                    $href = ("logout.php");
+                    $status = ("Sair");
+                } else {
+                    $href = ("login.php");
+                    $status = ("Logar");
+                }
+
                 ?>
 
                 <div class="div_cont_menu">
-                    <a href= <?= $href ?>>
+                    <a href=<?= $href ?>>
                         <div class="div_cont_menu_btn-login">
                             <button><i class="fa-regular fa-user"></i></button>
-                            <span><?= $status?></span>
+                            <span><?= $status ?></span>
                         </div>
                     </a>
                 </div>
@@ -132,9 +131,16 @@ if (isset($_SESSION['usuario_id'])) {
 
                     <div class="div-conteiner-btn">
 
-                        <div  class=" div-btn-comprar div-acoa ">
+                        <div class=" div-btn-comprar div-acoa ">
 
-                            <button class="btn_whasapp" data-vendedor="<?php echo $carro['usuario_id'];?>" data-descricao="<?php echo $carro['descricao']?>" class="LATO">WhatsApp</button>
+                            <button
+                                class="btn_whasapp"
+                                data-vendedor="<?php echo $carro['usuario_id']; ?>"
+                                data-descricao="<?php echo $carro['descricao'] ?>"
+                                data-carro_id="<?php echo $carro['id']?>"
+                                class="LATO">
+                                WhatsApp
+                            </button>
 
                         </div>
                     </div>
@@ -175,9 +181,9 @@ if (isset($_SESSION['usuario_id'])) {
         </div>
 
 
-            <script src="javascript/btn_rodapeES.js "></script>
-            <script src="javascript/btn_rodapeMC.js"></script>
-            </footer>
-   
+        <script src="javascript/btn_rodapeES.js "></script>
+        <script src="javascript/btn_rodapeMC.js"></script>
+    </footer>
+
 
 </html>
