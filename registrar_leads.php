@@ -9,6 +9,7 @@ $carro_id = $_POST['carro_id '] ?? null;//pegano o valor que esta na variavel ca
 
 if (!is_numeric($vendedor_id) || is_numeric($carro_id )) {//verificano se ambasas bariavens contem dados do tipo int
     die("Dados Invalidos");
+    exit;
 } else {
     $stmt = $conn->prepare("INSERT INTO leads (vendedor_id, carro_id , data) 
 VALUES (?,?,NOW())");//usando o statement para preparar a minha query sem passar os valores
