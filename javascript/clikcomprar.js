@@ -18,7 +18,7 @@ function abrirWhatsapp(vendedor_id, descricao, carro_id) {
         body: "vendedor_id=" + vendedor_id + "&descricao=" + descricao + "&carro_id=" + carro_id
     })
         .then(() => {
-            let mensagem = "Olá, tenho interesse no carro " + descricao + ". Consultor " + vendedor;
+            let mensagem = "Olá, tenho interesse, pode me passar mais informações sobre:" + descricao + ". Consultor " + vendedor;
             let url = "https://wa.me/5547992643867?text=" + encodeURIComponent(mensagem);
             window.open(url, "_blank");
         });
