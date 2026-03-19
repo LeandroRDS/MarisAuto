@@ -136,8 +136,8 @@ $resultado = mysqli_query($conn, $sql);
                             <button
                                 class="btn_whasapp"
                                 data-vendedor="<?php echo $carro['usuario_id']; ?>"
-                                data-descricao="<?php echo $carro['descricao'] ?>"
-                                data-carro_id="<?php echo $carro['id']?>"
+                                data-descricao="<?php echo $carro['descricao']; ?>"
+                                data-carro_id="<?php echo $carro['id'];?>"
                                 class="LATO">
                                 WhatsApp
                             </button>
