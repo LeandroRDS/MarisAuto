@@ -134,11 +134,11 @@ $resultado = mysqli_query($conn, $sql);
                         <div class=" div-btn-comprar div-acoa ">
 
                             <button
-                                class="btn_whasapp"
+                                class="btn_whasapp LATO"
                                 data-vendedor="<?php echo $carro['usuario_id']; ?>"
                                 data-descricao="<?php echo $carro['descricao']; ?>"
                                 data-carro_id="<?php echo $carro['id'];?>"
-                                class="LATO">
+                                >
                                 WhatsApp
                             </button>
 
