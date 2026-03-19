@@ -2,6 +2,54 @@ caso: clicar no btn comprar.
     cliente entra em index.php
     index carrega o site com os dados do meu login.
     cliente clica no btn comprar 
+        
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         pegar as informaçoes do carro e do vendedor
             colocar as informações na msg automatica no whts{...}
             colocar as informaçoes no bd_leads{
