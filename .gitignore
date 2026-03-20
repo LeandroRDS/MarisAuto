@@ -1,0 +1,5 @@
+# Arquivo de senhas — NUNCA enviar pro GitHub
+.env
+
+# Pasta de bibliotecas — não precisa enviar, Composer instala
+vendor/

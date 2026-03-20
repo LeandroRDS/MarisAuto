@@ -1,26 +1,28 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
+use Dotenv\Dotenv;
 
+require_once __DIR__ . '/../vendor/autoload.php';
 
-if($_SERVER['SERVER_NAME'] == "localhost"){
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-    $conn = new mysqli("localhost","root","","marisauto");
-
-}else{
-
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $conn = new mysqli(
-        "sql100.infinityfree.com",
-        "if0_40632939",
-        "Lrdsamdsjcpr123",
-        "if0_40632939_bd_anuncios"
+        $_ENV['DB_HOST_LOCAL'],
+        $_ENV['DB_USER_LOCAL'],
+        $_ENV['DB_PASS_LOCAL'],
+        $_ENV['DB_NAME_LOCAL']
     );
-
+} else {
+    $conn = new mysqli(
+        $_ENV['DB_HOST_PROD'],
+        $_ENV['DB_USER_PROD'],
+        $_ENV['DB_PASS_PROD'],
+        $_ENV['DB_NAME_PROD']
+    );
 }
 
 if($conn->connect_error){
-    die("Erro de conexão: " . $conn->connect_error);
+    die("Erro de conexção: " . $conn->connect_error);
 }
-
-?>
