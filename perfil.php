@@ -92,25 +92,6 @@ if (isset($_SESSION['usuario_id'])) {  //verificando se usuario_id existe
             </div>
 
             <div class="conteiner_opcoes">
-
-                <?php if ($usuarioLogado): ?>
-
-                    <a href="cadastrar_carro.php">
-                        <div class="opcoes"><!--btn criar anúcios-->
-
-                            <div class="div-img-foto-carro">
-                                <img class="class-img-opcao" src="img/plus.png" alt="adicionar anuncio">
-                            </div>
-
-                            <div class="div-descricao">
-                                <span class="descricao">Faça seus anúncioss</span>
-                            </div>
-
-                        </div>
-                    </a>
-                <?php endif; ?>
-
-
                 <div class="opcoes"><!--indicação-->
 
                     <div class="div-img-foto-carro">

@@ -1,15 +1,15 @@
 <?php
 include 'includes/conexao.php'; //conexao com o banco de dados
-session_start();
-if (isset($_SESSION['usuario_id'])) {
-    $usuarioLogado = true;
-    $usuario_id = $_SESSION['usuario_id'];
-    $sql = "SELECT * FROM carros WHERE usuario_id='$usuario_id'";
-} else {
-    $usuarioLogado = false;
-    $sql = "SELECT * FROM carros WHERE usuario_id='3' ORDER BY id DESC";
-}
-$resultado = mysqli_query($conn, $sql);
+
+$id_usuario = 3;
+
+$stmt = $conn->prepare("SELECT * FROM carros WHERE usuario_id=?");
+$stmt->bind_param("i", $id_usuario);
+$stmt->execute();
+$resultado = $stmt->get_result();
+$carro = $resultado->fetch_assoc();
+
+
 ?>
 
 
@@ -35,17 +35,6 @@ $resultado = mysqli_query($conn, $sql);
                 <div class="img-logo">
                     <img src="img/logomc.png" alt="img-logo">
                 </div>
-
-                <?php
-                if ($usuarioLogado) {
-                    $href = ("logout.php");
-                    $status = ("Sair");
-                } else {
-                    $href = ("login.php");
-                    $status = ("Logar");
-                }
-
-                ?>
 
                 <div class="div_cont_menu">
                     <a href=<?= $href ?>>
@@ -74,23 +63,6 @@ $resultado = mysqli_query($conn, $sql);
 
         <div class="conteiner_opcoes">
 
-            <?php if ($usuarioLogado): ?>
-
-                <a href="cadastrar_carro.php">
-                    <div class="opcoes"><!--btn criar anúcios-->
-
-                        <div class="div-img-foto-carro">
-                            <img class="class-img-opcao" src="img/plus.png" alt="adicionar anuncio">
-                        </div>
-
-                        <div class="div-descricao">
-                            <span class="descricao">Faça seus anúncioss</span>
-                        </div>
-
-                    </div>
-                </a>
-            <?php endif; ?>
-
 
             <div class="opcoes"><!--indicação-->
 
@@ -110,13 +82,10 @@ $resultado = mysqli_query($conn, $sql);
                 </div>
             </div>
 
-            <?php
-            $resultado = $conn->query($sql);
-            ?>
 
 
             <?php
-            while ($carro = $resultado->fetch_assoc()):
+            while ($carro):
             ?>
 
                 <div class="carro opcoes">
