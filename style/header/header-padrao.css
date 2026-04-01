@@ -49,20 +49,28 @@
 .div_cont_menu {
     display: flex;
     flex-direction: row;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     top: 5px;
-    left: calc(90% - 100px);
-    width: 100px;
-    height: 100px;
-    background-color: initial;
+    right: 20px;
+    gap: 1rem;
+    padding: 0.5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.37);
 }
 
 .div_cont_menu_btn-login {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    background-color: initial;
 }
 
-.div_cont_menu_btn-login button {
+.div_cont_menu button {
     font-size: 1.4rem;
     border: none;
     background-color: rgba(0, 21, 255, 0.500);
@@ -72,12 +80,14 @@
 
 }
 
-.div_cont_menu_btn-login i {
+.div_cont_menu i {
     color: rgb(255, 255, 255);
+    background-color: initial;
 
 }
 
-.div_cont_menu_btn-login span {
+.div_cont_menu span {
     color: aliceblue;
     text-align: center;
+    background-color: initial;
 }

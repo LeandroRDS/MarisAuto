@@ -3,34 +3,40 @@ session_start();
 
 include("includes/conexao.php");
 
- 
-$user = $_SESSION['usuario_id'];
+if (isset($_SESSION['usuario_id'])) {  //verificando se usuario_id existe
+    $usuarioLogado = true;
 
-$stmt = $conn->prepare("SELECT * FROM carros WHERE usuario_id=?");
-$stmt->bind_param("i", $user);
-$stmt->execute();
-$res = $stmt->get_result();
+    $usuario_id = $_SESSION['usuario_id'];
 
+    $stmt = $conn->prepare("SELECT * FROM carros WHERE usuario_id=?");
+    $stmt->bind_param("i", $usuario_id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $carro = $resultado->fetch_assoc();
+} else {
+    $usuarioLogado = false;
 
-
+    $stmt = $conn->prepare("SELECT * FROM carros WHERE usuario_id=?");
+    $stmt->bind_param("i", $usuario_id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $carro = $resultado->fetch_assoc();
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Maris Auto</title>
-
-        <link rel="stylesheet" href="style/imports.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maris Auto</title>
+    <link rel="stylesheet" href="style/imports.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
 
 <body>
-
-    <?php while ($carro = $res->fetch_assoc()): ?>
+    <?php while ($carro ): ?>
 
         <header>
 
@@ -43,22 +49,29 @@ $res = $stmt->get_result();
 
                     <?php
                     if ($usuarioLogado) {
-                        $href = ("logout.php");
+                        $href_logar = ("logout.php");
                         $status = ("Sair");
+                        $add_anuncio = ("cadastrar_carro.php");
                     } else {
-                        $href = ("login.php");
+                        $href_logar = ("login.php");
                         $status = ("Logar");
                     }
-
                     ?>
 
                     <div class="div_cont_menu">
-                        <a href=<?= $href ?>>
+                        <a href=<?= $href_logar ?>>
                             <div class="div_cont_menu_btn-login">
                                 <button><i class="fa-regular fa-user"></i></button>
                                 <span><?= $status ?></span>
                             </div>
                         </a>
+                        <a href=<?= $add_anuncio ?>?>
+                            <div class="div_cont_menu_btn-login">
+                                <button><i class="fa-solid fa-plus"></i></button>
+                                <span>Anunciar</span>
+                            </div>
+                        </a>
+
                     </div>
 
                 </div>
@@ -68,6 +81,7 @@ $res = $stmt->get_result();
                         <span id="span3">MC MOTORS</span>
                     </div>
                 </div>
+                
             </div>
         </header>
 
@@ -142,8 +156,7 @@ $res = $stmt->get_result();
                                     class="btn_whasapp LATO"
                                     data-vendedor="<?php echo $carro['usuario_id']; ?>"
                                     data-descricao="<?php echo $carro['descricao']; ?>"
-                                    data-carro_id="<?php echo $carro['id'];?>"
-                                    >
+                                    data-carro_id="<?php echo $carro['id']; ?>">
                                     WhatsApp
                                 </button>
 
@@ -191,9 +204,9 @@ $res = $stmt->get_result();
         </footer>
 
 
-  
 
-        
+
+
 
     <?php endwhile; ?>
 
