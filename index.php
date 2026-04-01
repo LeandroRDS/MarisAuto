@@ -1,15 +1,9 @@
 <?php
-include 'includes/conexao.php'; //conexao com o banco de dados
-
-$id_usuario = 3;
-
-$stmt = $conn->prepare("SELECT * FROM carros WHERE usuario_id=?");
-$stmt->bind_param("i", $id_usuario);
-$stmt->execute();
-$resultado = $stmt->get_result();
-$carro = $resultado->fetch_assoc();
-
-
+    session_start();
+    require_once 'config.php';
+    $usuario_id = 3;
+    $dados = verificarLogin($conn, $usuario_id);
+ 
 ?>
 
 
@@ -37,10 +31,10 @@ $carro = $resultado->fetch_assoc();
                 </div>
 
                 <div class="div_cont_menu">
-                    <a href=<?= $href ?>>
+                    <a href=<?= $dados->href ?>>
                         <div class="div_cont_menu_btn-login">
                             <button><i class="fa-regular fa-user"></i></button>
-                            <span><?= $status ?></span>
+                            <span><?= $dados->status ?></span>
                         </div>
                     </a>
                 </div>
@@ -85,7 +79,7 @@ $carro = $resultado->fetch_assoc();
 
 
             <?php
-            while ($carro):
+            while ($dados->carro):
             ?>
 
                 <div class="carro opcoes">

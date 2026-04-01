@@ -47,19 +47,8 @@ if (isset($_SESSION['usuario_id'])) {  //verificando se usuario_id existe
                         <img src="img/logomc.png" alt="img-logo">
                     </div>
 
-                    <?php
-                    if ($usuarioLogado) {
-                        $href_logar = ("logout.php");
-                        $status = ("Sair");
-                        $add_anuncio = ("cadastrar_carro.php");
-                    } else {
-                        $href_logar = ("login.php");
-                        $status = ("Logar");
-                    }
-                    ?>
-
                     <div class="div_cont_menu">
-                        <a href=<?= $href_logar ?>>
+                        <a href=<?= $href ?>>
                             <div class="div_cont_menu_btn-login">
                                 <button><i class="fa-regular fa-user"></i></button>
                                 <span><?= $status ?></span>
@@ -110,9 +99,7 @@ if (isset($_SESSION['usuario_id'])) {  //verificando se usuario_id existe
                     </div>
                 </div>
 
-                <?php
-                $resultado = $conn->query($sql);
-                ?>
+               
 
 
                 <?php
