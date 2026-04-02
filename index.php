@@ -1,6 +1,9 @@
 <?php
     require_once 'config.php';//importando includes
-    $usuario_id = $_GET['user'] ?? null;
+    $usuario_name = $_GET['user'] ?? null;
+    if(!isset($usuario_name)){
+      $usuario_id = 3 ;
+    };
     $dados = verificarLogin($conn, $usuario_id);
     $resultado = $dados->resultado;
 

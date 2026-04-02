@@ -1,7 +1,31 @@
 <?php
-
 require_once 'config.php';
-$dados = verificarLogin($conn, $_SESSION['usuario_id']);
+
+$usuario_name = $_GET['user'] ?? null;
+if (!isset($usuario_name)) {
+    $usuario_id = 3;
+} else {
+    $stmt = $conn->prepare("SELECT id FROM usuarios WHERE usuario = ? LIMIT 1");
+    $stmt->bind_param("s", $usuario_name);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if($resultado->num_rows > 0){
+        $dados = $resultado->fetch_assoc();
+        $usuario_id = $dados['id'];
+
+    }else{
+        http_response_code(404);
+        die("Usuario '$usuario_name' não encontrado");
+    }
+};
+
+if(isset($_SESSION['usuario_id'])){
+    $dados = verificarLogin($conn, $_SESSION['usuario_id']);
+}else{
+    $dados = verificarLogin($conn, $usuario_id);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -34,12 +58,16 @@ $dados = verificarLogin($conn, $_SESSION['usuario_id']);
                             <span><?= $dados->status ?></span>
                         </div>
                     </a>
-                    <a href=<?= $dados->add_anuncio ?>?>
-                        <div class="div_cont_menu_btn-login">
-                            <button><i class="fa-solid fa-plus"></i></button>
-                            <span>Anunciar</span>
-                        </div>
-                    </a>
+                    <?php if ($dados->usuarioLogado): ?>
+
+                        <a href="<?= $dados->add_anuncio ?>">
+                            <div class="div_cont_menu_btn-login">
+                                <button><i class="fa-solid fa-plus"></i></button>
+                                <span>Anunciar</span>
+                            </div>
+                        </a>
+
+                    <?php endif; ?>
 
                 </div>
 
@@ -89,12 +117,12 @@ $dados = verificarLogin($conn, $_SESSION['usuario_id']);
                 <div class="carro opcoes">
 
                     <div class="div-img-foto-carro">
-                        <img class="class-img-opcao" 
-                        src="uploads/<?php echo $carro['foto'] ?? 'padrao.png'; ?>" alt="Hb20 2024 1.0 Completo">
+                        <img class="class-img-opcao"
+                            src="uploads/<?php echo $carro['foto'] ?? 'padrao.png'; ?>" alt="Hb20 2024 1.0 Completo">
                     </div>
 
                     <div class="div-descricao">
-                        <span class="descricao"> <?php echo $carro['descricao']?? 'Sem descrição'; ?> <br> Entrada + parcelas a partir de <?php echo $carro['valor']; ?> </span>
+                        <span class="descricao"> <?php echo $carro['descricao'] ?? 'Sem descrição'; ?> <br> Entrada + parcelas a partir de <?php echo $carro['valor']; ?> </span>
                     </div>
 
                     <div class="div-conteiner-btn">

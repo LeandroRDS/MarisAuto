@@ -38,7 +38,8 @@ function verificarLogin($conn, $usuario_id)
         "resultado" => $resultado,
         "href" => $href,
         "status" => $status,
-        "add_anuncio" => $add_anuncio
+        "add_anuncio" => $add_anuncio,
+        "usuarioLogado" => $usuarioLogado
 
     ];
 }
