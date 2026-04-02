@@ -2,7 +2,6 @@
 
 require_once 'config.php';
 $dados = verificarLogin($conn, $_SESSION['usuario_id']);
-echo $_SESSION['usuario_id'];
 ?>
 
 <!DOCTYPE html>
@@ -90,17 +89,12 @@ echo $_SESSION['usuario_id'];
                 <div class="carro opcoes">
 
                     <div class="div-img-foto-carro">
-                        <img class="class-img-opcao" src="uploads/<?php echo $carro['foto']; ?>" alt="Hb20 2024 1.0 Completo">
+                        <img class="class-img-opcao" 
+                        src="uploads/<?php echo $carro['foto'] ?? 'padrao.png'; ?>" alt="Hb20 2024 1.0 Completo">
                     </div>
 
-                    <?php echo $carro['usuario_id'];
-                    echo "<pre>";
-                    print_r($carro);
-                    echo "</pre>";
-                    ?>
-
                     <div class="div-descricao">
-                        <span class="descricao"> <?php echo $carro['descricao']; ?> <br> Entrada + parcelas a partir de <?php echo $carro['valor']; ?> </span>
+                        <span class="descricao"> <?php echo $carro['descricao']?? 'Sem descrição'; ?> <br> Entrada + parcelas a partir de <?php echo $carro['valor']; ?> </span>
                     </div>
 
                     <div class="div-conteiner-btn">

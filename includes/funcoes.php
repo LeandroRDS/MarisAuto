@@ -31,6 +31,7 @@ function verificarLogin($conn, $usuario_id)
     } else {
         $href = ("login.php");
         $status = ("Logar");
+        $add_anuncio = ("login.php");
     }
 
     return (object)[
