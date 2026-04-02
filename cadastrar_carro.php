@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $conn->query($sql);
 
-        header("Location: pefil.php");
+        header("Location: perfil.php");
         exit();
 
     //echo "Carro cadastrado com sucesso!";
