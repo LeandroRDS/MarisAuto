@@ -1,16 +1,19 @@
 <?php
-require_once 'config.php';
+if(session_start() === PHP_SESSION_NONE){
+    session_start();
+}
+require_once 'includes/conexao.php';
 
 function verificarLogin($conn, $usuario_id)
 {
-    if (isset($usuario_id)) {
+    if (isset($_SESSION['usuario_id'])) {
         $usuarioLogado = true;
 
         $stmt = $conn->prepare("SELECT * FROM carros WHERE usuario_id=?");
         $stmt->bind_param("i", $usuario_id);
         $stmt->execute();
         $resultado = $stmt->get_result();
-        $carro = $resultado->fetch_assoc();
+       
     } else {
         $usuarioLogado = false;
 
@@ -18,7 +21,7 @@ function verificarLogin($conn, $usuario_id)
         $stmt->bind_param("i", $usuario_id);
         $stmt->execute();
         $resultado = $stmt->get_result();
-        $carro = $resultado->fetch_assoc();
+       
     }
 
     if ($usuarioLogado) {
@@ -31,7 +34,7 @@ function verificarLogin($conn, $usuario_id)
     }
 
     return (object)[
-        "carro" => $carro,
+        "resultado" => $resultado,
         "href" => $href,
         "status" => $status,
         "add_anuncio" => $add_anuncio

@@ -1,9 +1,8 @@
 <?php
-    session_start();
-    require_once 'config.php';
+    require_once 'config.php';//importando includes
     $usuario_id = 3;
     $dados = verificarLogin($conn, $usuario_id);
- 
+    $resultado = $dados->resultado;
 ?>
 
 
@@ -14,7 +13,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maris Auto</title>
-
     <link rel="stylesheet" href="style/imports.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -31,7 +29,7 @@
                 </div>
 
                 <div class="div_cont_menu">
-                    <a href=<?= $dados->href ?>>
+                    <a href="<?= $dados->href ?>">
                         <div class="div_cont_menu_btn-login">
                             <button><i class="fa-regular fa-user"></i></button>
                             <span><?= $dados->status ?></span>
@@ -79,7 +77,7 @@
 
 
             <?php
-            while ($dados->carro):
+            while ($carro = $resultado->fetch_assoc()):
             ?>
 
                 <div class="carro opcoes">
