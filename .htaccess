@@ -1,15 +1,19 @@
 # ============================================
-# .htaccess - VERSÃO XAMPP COM SUBPASTA
+# .htaccess - UNIVERSAL (XAMPP + InfinityFree)
 # ============================================
 
 RewriteEngine On
 
-# IMPORTANTE: Com subpasta, precisa do caminho!
-RewriteBase /marisauto_01/
+# Detecta se está em subpasta ou raiz
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
 
-# Se for arquivo ou pasta real, não reescreve
+# Define o RewriteBase dinamicamente
+RewriteBase %{ENV:BASE}
+
+# Se for arquivo real, não reescreve
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Regra: /vanessa → index.php?user=vanessa
+# Regra: /usuario → perfil.php?user=usuario
 RewriteRule ^([a-zA-Z0-9!@$*_-]+)$ perfil.php?user=$1 [L,QSA]
