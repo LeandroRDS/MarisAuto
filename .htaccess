@@ -1,15 +1,6 @@
-# ============================================
-# .htaccess - VERSÃO XAMPP COM SUBPASTA
-# ============================================
-
+Options -Indexes
 RewriteEngine On
 
-# IMPORTANTE: Com subpasta, precisa do caminho!
-RewriteBase /marisauto_01/
-
-# Se for arquivo ou pasta real, não reescreve
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# Regra: /vanessa → index.php?user=vanessa
-RewriteRule ^([a-zA-Z0-9!@$*_-]+)$ perfil.php?user=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?user=$1 [L,QSA]

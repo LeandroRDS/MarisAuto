@@ -42,4 +42,6 @@ function verificarLogin($conn, $usuario_id)
         "usuarioLogado" => $usuarioLogado
 
     ];
+
+    
 }

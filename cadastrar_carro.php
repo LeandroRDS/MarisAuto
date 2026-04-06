@@ -3,9 +3,7 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
-include 'includes/conexao.php';
-
-session_start();
+require_once 'config.php';
 
 if(!isset($_SESSION['usuario_id'])){
     header("location: login.php");
@@ -24,15 +22,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     move_uploaded_file($tmp, "uploads/".$foto);
 
-    $sql = "INSERT INTO carros (descricao, valor, foto, usuario_id)
-    VALUES ('$descricao', '$valor', '$foto', '$_usuario_id')";
-
-    $conn->query($sql);
+   $stmt = $conn->prepare("INSERT INTO carros (descricao, valor, foto, usuario_id)
+    VALUES (? , ?, ?, ?)");
+    $stmt->bind_param("sisi",$descricao, $valor, $foto, $_usuario_id );
+    $stmt->execute();
 
         header("Location: perfil.php");
         exit();
-
-    //echo "Carro cadastrado com sucesso!";
     
     
 }
