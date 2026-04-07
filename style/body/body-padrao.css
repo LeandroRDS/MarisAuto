@@ -3,6 +3,15 @@ body::-webkit-scrollbar {
     /* Esconde a barra no Chrome, Safari e Edge */
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}   
 
 /* estilização do cabaçalho do body */
 .div-span-apresentacao {
@@ -93,7 +102,7 @@ body::-webkit-scrollbar {
 
 }
 
-.opcoes .div-conteiner-btn .div-btn-comprar button{
+.opcoes .div-conteiner-btn .div-btn-comprar button {
 
     border: none;
     background-color: transparent;
