@@ -1,11 +1,12 @@
 <?php
-if(session_start() === PHP_SESSION_NONE){
+if (session_start() === PHP_SESSION_NONE) {
     session_start();
 }
 require_once 'includes/conexao.php';
 
 function verificarLogin($conn, $usuario_id)
 {
+
     if (isset($_SESSION['usuario_id'])) {
         $usuarioLogado = true;
 
@@ -13,7 +14,6 @@ function verificarLogin($conn, $usuario_id)
         $stmt->bind_param("i", $usuario_id);
         $stmt->execute();
         $resultado = $stmt->get_result();
-       
     } else {
         $usuarioLogado = false;
 
@@ -21,7 +21,6 @@ function verificarLogin($conn, $usuario_id)
         $stmt->bind_param("i", $usuario_id);
         $stmt->execute();
         $resultado = $stmt->get_result();
-       
     }
 
     if ($usuarioLogado) {
@@ -42,6 +41,4 @@ function verificarLogin($conn, $usuario_id)
         "usuarioLogado" => $usuarioLogado
 
     ];
-
-    
 }

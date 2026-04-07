@@ -1,21 +1,33 @@
 <?php
 
-$usuario_id = $_GET['user']  ?? null;
+if (isset($_SESSION['usuario_id'])) {
+    header("Location: perfil.php");
+    exit;
+    
+}
 
-if (!empty($usuario_id)) {
-    $_GET['user'] = $usuario_id;
+
+$usuario_id = $_GET['user']  ?? null;
+//aqui eu pego o usario na url se nao tiver fica null
+
+if (!empty($usuario_id)) {//nerificando se usuario NAO esta vasio
+    $_GET['user'] = $usuario_id; //se existir o usario ele vai ficar em get user
     include __DIR__ . '/perfil.php';
     exit();
 }
 
-mostrarPaginaInical();
+mostrarPaginaInical();//chamando função que vai mostrar a pagina inicial
 
-function mostrarPaginaInical()
+function mostrarPaginaInical()//funação mostara pagina inicail
 {
 
 
     require_once 'config.php'; //importando includes
-    $usuario_name = $_GET['user'] ?? null;
+
+  
+
+    $usuario_name = $_GET['user'] ?? null;//
+
     if (!isset($usuario_name)) {
         $usuario_id = 3;
     } else {
@@ -135,37 +147,7 @@ function mostrarPaginaInical()
 
         </body>
 
-        <footer>
-            <div class="div_footer_conteiner">
-                <div class="conteiner_ES">
-                    <div class="div_footer_identificacao_ES div_footer">
-                        <span>Criado Por Embrasoft &reg;</span>
-
-                    </div>
-                    <div class="div_footer_contatos_ES div_footer ">
-                        <span class="span_contato span_contato_whatsapp">Whasapp</span>
-                        <span class="span_contato span_contato_instagram">Instagran</span>
-                        <span class="span_contato span_contato_linkedin">LinkedIn</span>
-                    </div>
-                </div>
-
-                <div class="conteiner_MC">
-                    <div class="div_footer_identificacao_MC div_footer">
-                        <span>Mc Motors ltda &reg;</span>
-
-                    </div>
-                    <div class="div_footer_contatos_MC div_footer">
-                        <span class="span_contato span_contato_whatsapp_MC">Whasapp</span>
-                        <span class=" span_contato span_contato_intagram_mc">Instagran</span>
-                        <span class="span_contato span_contato_avaliacoes" id="span_avaliacao">Avalçiações do Google</span>
-                    </div>
-                </div>
-            </div>
-
-
-            <script src="javascript/btn_rodapeES.js "></script>
-            <script src="javascript/btn_rodapeMC.js"></script>
-        </footer>
+        
 
 
     </html>
