@@ -1,10 +1,6 @@
 <?php
 
-if (isset($_SESSION['usuario_id'])) {
-    header("Location: perfil.php");
-    exit;
-    
-}
+require_once 'config.php';
 
 
 $usuario_id = $_GET['user']  ?? null;
@@ -22,9 +18,7 @@ function mostrarPaginaInical()//funação mostara pagina inicail
 {
 
 
-    require_once 'config.php'; //importando includes
 
-  
 
     $usuario_name = $_GET['user'] ?? null;//
 

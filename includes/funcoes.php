@@ -1,8 +1,6 @@
 <?php
-if (session_start() === PHP_SESSION_NONE) {
-    session_start();
-}
-require_once 'includes/conexao.php';
+
+require_once 'config.php';
 
 function verificarLogin($conn, $usuario_id)
 {
