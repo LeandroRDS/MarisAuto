@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="campo">
                 <span>Foto</span>
-                <input class="btn_foto" type="file" name="foto">
+                <input class="btn_foto" accept="image/*" type="file" name="foto">
             </div>
 
             <button class="btn_cadastrar" id="btn_cadastrar" type="submit">Cadastrar</button>
