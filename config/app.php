@@ -11,7 +11,9 @@ if(session_status() === PHP_SESSION_NONE){
 
 
 if($_SERVER['HTTP_HOST'] === 'localhost'){
-    define()
+    define('BASE_URL', 'https://localhost/marisauto/public');
+}else{
+    define('BASE_URL', 'https://marisauto.infinityfree.me/public' );
 }
 
 ?>
